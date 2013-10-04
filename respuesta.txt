@@ -1,0 +1,168 @@
+ 18. Muestra por pantalla el 'Hola Mundo' y luego devuelve un nil (nulo) debido a que en Ruby, todos los metodos devuelven algo. En este caso un nil.
+
+ 21. Las comillas dobles interpolan el espacio y el salto de linea, mientras que con las comillas simples se muestra "\t \n".
+
+ 22. "%q" funciona como las comillas simples (no interpolan).
+
+ 23. "%Q" funciona como las comillas dobles (interpolan).
+
+ 24. En la variable "c" se almacena todo lo que esta entre "<<Here" y "Here", los valores de 4 (a) y 2 (b), así como los saltos de linea (\n).
+Salida => "--4--\n--2--\n".
+
+ 25. En la variable "c" se almacena todo lo que esta entre "<<Here" y "Here", literalmente lo que ponemos, así como los saltos de linea (\n).
+Salida => "--\#{a}--\n--\#{b}--\n".
+
+ 26. 1) s[0,2]
+     => "he".
+
+     2) s[-1,1]
+     => "o".
+
+     3) s[0,10]
+     => "hello".
+
+ 27. Con el primer comando inserta la cadena "hello" en g y con el segundo comando concatena al valor anterior la cadena "world", quedando como el resultado => "hello world".
+
+ 28. En e se almacenan 3 puntos, quedando como valor de e => "...".
+
+ 29. Se asigna el valor 1 a la variable a con el primer comando y en el segundo comando primero se le suma 1 al valor de a quedando asi el valor 2 y se almacena 3 veces este resultado. Salida => "2 2 2 ".
+
+ 30. Guarda por separado en un array cada palabra de la cadena, en este caso al tener 4 palabras la cadena crea un array de tamaño 4. Salida => ["this", "is", "a", "test"].
+
+ 31. Guarda en un array cada simbolo o conjunto de simbolos separados por un espacio, en este caso sin interpolar. Salida => ["\\t", "\\n"].
+
+ 32. Guarda en un array cada simbolo o conjunto de simbolos separados por un espacio, en este caso interpolando. Salida => ["\t", "\n"].
+
+ 33. nils es un array de tamaño 3 en el que todas las posiciones valen nil o esta iniciado a nil.
+
+ 34. zeros es un array de tamaño 3 en el que todas las posiciones valen 0 o
+esta iniciado a 0.
+
+ 35. la variable b contiene una array del mismo tamaño que la array x (tamaño 2) y exactamente con los mismo valores (un array igual). Salida => [[1, 2], [3, 4]].
+
+ 36. Un array de tamaño 3 en el que el valor de cada posicion (i) del array vendrá dada por esta posición multiplicada por 2 (i*2). Salida => [0, 2, 4].
+
+ 37. 1) > a[1,1]
+        => ["b"].
+        Muestra una posicion, empezando por la posicion segunda (recordando que la primera es 0).
+
+     2) > a[-2,2]
+        => ["d", "e"].
+	Muestra los valores de dos posiciones empezando por la posicion -2 (valores de las posiciones -1 y -2).
+
+     3) > a[0..2]
+        => ["a", "b", "c"].
+	Muestra los valores de las posiciones que esten en el rango [0,2].
+
+     4) > a[0...1]
+        => ["a"].
+	Muestra los valores de las posiciones que esten en el rango [0,1[. 
+
+     5) > a[-2..-1]
+        => ["d", "e"].
+	Muestra los valores de las posiciones que esten en el rango [-2,-1], recordando que la posición -1 es la última posición del array.
+
+ 38. 1) a
+        => ["A", "B", "c", "d", "e"].
+	Añade "A" y "B" a las dos primeras posiciones del array.
+
+     2) a
+        => ["A", "B", "C", "D", "E"].
+        Añade "C", "D" y "E" a las tres ultimas posiciones del array.
+
+     3) a
+        => [1, 2, 3, "A", "B", "C", "D", "E"].
+	Añade "1", "2" y "3" al array justo al principio y modificando el tamaño del array (pasando el array a ser de tamaño 8 frente al tamaño 5 que tenia antes).
+
+     4) a
+        => [3, "A", "B", "C", "D", "E"].
+	Trunca el tamaño del array al mandar con el comando a vaciar las dos primeras posiciones, pasa a tener tamaño 6 el array.
+
+     5) a
+        => [3, "A", "B", "C", "D", "Z"].
+	Añade la "Z" en la ultima posicion del array.
+
+     6) a
+        => [3, "A", "B", "C"].
+	Inicia a nulo (nil) las dos ultimas posiciones del array, por lo tanto estas desaparecen pasando a tener tamaño 4 el array.
+
+
+ 39. 1) > a = (1...4).to_a
+        => [1, 2, 3].
+	Crea un array de tamaño 3 (esto es debido al poner de rango del array [1,4[).
+
+     2) > a = a + [4, 5]
+        => [1, 2, 3, 4, 5].
+	Añade dos posiciones mas (4 y 5) y el array pasa de tamaño 3 a tamaño 5.
+
+     3) > a += [[6, 7, 8]]
+        => [1, 2, 3, 4, 5, [6, 7, 8]].
+	Añade una posicion (con valor "[6, 7, 8]") y el array pasa de tamaño 5 a tamaño 6.
+
+     4) > a = a + 9
+        TypeError: can't convert Fixnum into Array
+                from (irb):65:in `+'
+                from (irb):65
+                from :0.
+        Me muestra un error porque no se puede convertir un número a una array.
+ 
+ 40. 1) x = %w{a b c b a}
+        => ["a", "b", "c", "b", "a"].
+	Crea un array (x) que tiene tamaño 5 y por valores "a", "b", "c", "b" y "a".
+
+     2) x = x - %w{b c d}
+        => ["a", "a"].
+	Elimina las "b", "c" y "d" que tengan la array (x) quedando solo las dos "a" que contenia.
+
+ 41. z = [0] *8
+     => [0, 0, 0, 0, 0, 0, 0, 0].
+     Crea un array (z) que tiene tamaño 8 y todos sus elementos son "0".
+
+ 42. 1) a = []
+        => [].
+        Crea un array de tamaño 1 y con nada dentro.
+
+     2) a << 1
+        => [1].
+	Concatena el valor "1" al array (a), sigue siendo un array de tamaño 1 pero con valor "1".
+
+     3) a << 2 << 3
+        => [1, 2, 3].
+	Concatena el valor "2" y luego el valor "3" al array (a), pasando a tener tamaño 3 y los valores "1", "2" y "3".
+
+     4) a << [4, 5, 6]
+        => [1, 2, 3, [4, 5, 6]].
+	Concatena el valor "[4, 5, 6]" al array (a), pasando a tener tamaño 4 el array y los valores "1", "2", "3" y "[4, 5, 6]".
+
+     5) a.concat [7,8]
+        => [1, 2, 3, [4, 5, 6], 7, 8].
+	Concatena el valor "7" y el valor "8" al array (a), pasando a tener este tamaño 6 y los valores "1", "2", "3", "[4, 5, 6]", "7" y "8".
+
+ 43. 1) c = a|b
+        => [1, 2, 3, 4, 5].
+	El comando da como resultado la union de a y b, o lo que es lo mismo todos los elementos que tengan a y b comunes y no comunes, repetidos y no repetidos. Se muestra en orden ascendente debido a que el array a aparece antes en el comando.
+
+     2) d = b|a
+        => [5, 4, 3, 2, 1].
+	El comando da como resultado la union de b y a, o lo que es lo mismo todos los elementos que tengan b y a comunes y no comunes, repetidos y no repetidos. Se muestra en orden descendente debido a que el array b aparece antes en el comando.
+
+     3) e = a & b
+        => [2, 3, 4].
+	El comando da como resultado la interseccion de a y b, o lo que es lo mismo todos los elementos que tengan a y b comunes, repetidos y no repetidos. Se muestra en orden ascendente debido a que el array a aparece antes en el comando.
+
+     4) f = b & a
+        => [4, 3, 2].
+	El comando da como resultado la interseccion de b y a, o lo que es lo mismo todos los elementos que tengan a y b comunes, repetidos y no repetidos. Se muestra en orden descendente debido a que el array b aparece antes en el comando.
+
+
+
+
+
+
+
+
+
+
+
+
+
